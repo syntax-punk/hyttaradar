@@ -10,6 +10,7 @@
     "@types/node": "^12.20.4",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
+    "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
@@ -20,7 +21,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate:data": "node scripts/dbGenerator.js",    
+    "db:server": "json-server --port=9200 --watch db.json",
+    "start:server": "npm run generate:data && npm run db:server"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "json-server": "^0.16.3"
   }
 }

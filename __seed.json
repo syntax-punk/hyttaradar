@@ -1,0 +1,235 @@
+{
+  "cabins": [
+    {
+      "id": 100,
+      "name": "Randaberg Resort",
+      "address": "Rønvikveien 71, 8009 Bodø",
+      "description": "Resort is situated in Bodø and features air-conditioned accommodation with free WiFi, as well as access to a terrace.",
+      "imageUrl": "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      "googleMapsUrl": "https://www.google.com/maps/@67.291098,14.379608,13.31z",
+      "rank": 4,
+      "price": "1200 NOK"
+    },
+    {
+      "id": 101,
+      "name": "Maybua Hytta",
+      "address": "Teglverkveien 1, 8012 Bodø",
+      "description": "Maybua is located in the picturesque fishing village Bodø. This traditional waterfront house offers free WiFi.",
+      "imageUrl": "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      "googleMapsUrl": "https://www.google.com/maps/@58.9655447,5.7602713,17z",
+      "rank": 4,
+      "price": "1200 NOK"
+    },
+    {
+      "id": 102,
+      "name": "Holmen Plaza",
+      "address": "Sjøveien 39, 8050 Tverlandet",
+      "description": "Situated 3.5 km from the picturesque Tverlandet fishing village, these waterfront fishermen’s cottages include a kitchenette, seating area and balcony with sea views.",
+      "imageUrl": "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      "googleMapsUrl": "https://www.google.com/maps/@67.3325375,14.6213061,11.01z",
+      "rank": 4,
+      "price": "1200 NOK"
+    },
+    {
+      "id": 103,
+      "name": "Lærvig Hytta",
+      "address": "Tverrlandet, 8050 Bodø",
+      "description": "Boasting a garden, barbecue facilities, and a terrace, Sea-view house in Bodø offers accommodation in Bodø with free WiFi and lake views.",
+      "imageUrl": "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      "googleMapsUrl": "https://www.google.com/maps/@66.1348772,13.7525353,17z",
+      "rank": 4,
+      "price": "1200 NOK"
+    },
+    {
+      "id": 104,
+      "name": "Gravdal Hus",
+      "address": "Gnr 20 Bnr 5, 8264 Engan",
+      "description": "This property offers traditional fishing cottages with sea views. Guests can try a wood-fired hot tub or activities such as fishing, kayaking and hiking. WiFi is in some cottages.",
+      "imageUrl": "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      "googleMapsUrl": "https://www.google.com/maps/@67.932615,16.3343693,17z",
+      "rank": 4,
+      "price": "1200 NOK"
+    },
+    {
+      "id": 105,
+      "name": "Bøstad Resort",
+      "address": "Granveien 4, 8590 Kjøpsvik",
+      "description": "Guests are welcome to enjoy the free WiFi. The holiday home offers a terrace. Guests can also relax in the garden.",
+      "imageUrl": "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      "googleMapsUrl": "https://www.google.com/maps/@66.1711052,13.9228393,17z",
+      "rank": 4,
+      "price": "1200 NOK"
+    },
+    {
+      "id": 106,
+      "name": "Kabelvåg Huset",
+      "address": "Bakkanveien 5, 8590 Kjøpsvik",
+      "description": "Situated in the well-known beach of Kjøpsvik, seaside villa features an outdoor swimming pool and solarium. Guests benefit from Kjøpsvik sea views.",
+      "imageUrl": "https://source.unsplash.com/320x240/?house,camp,building,vacation,hotel",
+      "googleMapsUrl": "https://www.google.com/maps/@59.4415547,6.1512183,17z",
+      "rank": 4,
+      "price": "1200 NOK"
+    },
+    {
+      "id": 107,
+      "name": "Sanden Plass",
+      "address": "Sentrumsveien 65, 8540 Ballangen",
+      "description": "Located 100 metres from the centre of the Ballangen Town and 80 metres from the beach, Sanden offers air-conditioned apartments with furnished balcony overlooking the Nordic Sea.",
+      "imageUrl": "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      "googleMapsUrl": "https://www.google.com/maps/@61.0812626,6.6409063,17z",
+      "rank": 4,
+      "price": "1200 NOK"
+    },
+    {
+      "id": 108,
+      "name": "Raften Studios",
+      "address": "Stor, 8540 Ballangen",
+      "description": "Featuring an outdoor pool with a covered terrace, Raften Studios are located in Ballangen. It is within a 5-minute walk from the beach and the centre of the Fishing Town.",
+      "imageUrl": "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      "googleMapsUrl": "https://www.google.com/maps/@61.4021636,6.6674973,17z",
+      "rank": 4,
+      "price": "1200 NOK"
+    },
+    {
+      "id": 109,
+      "name": "Kongsvika",
+      "address": "Kjøpmannsgata 29 B, 7500 Stjørdal",
+      "description": "Boasting sea views, Kongsvika features accommodation with a balcony and a kettle, around 3 km from Stjørdal. It has city views and free WiFi throughout the property.",
+      "imageUrl": "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      "googleMapsUrl": "https://www.google.com/maps/@63.3547924,9.6289113,17z",
+      "rank": 4,
+      "price": "1200 NOK"
+    },
+    {
+      "id": 110,
+      "name": "Ulvik Resort",
+      "address": "Havnegata 41, 7500 Stjørdal",
+      "description": "Ulvik Resort is 1 km from Stjørdal, the island's main area, and offers air-conditioned accommodation. Free WiFi access is available. The nearest kebab place is 1.5 km away.",
+      "imageUrl": "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      "googleMapsUrl": "https://www.google.com/maps/@63.3563844,9.6467183,17z",
+      "rank": 4,
+      "price": "1200 NOK"
+    },
+    {
+      "id": 111,
+      "name": "Villa Dyrøya",
+      "address": "Kaares gate 36, 7300 Orkanger",
+      "description": "Located just 50 metres from the beach, Villa Dyrøya offers rooms and apartments that open to balconies with sea view. It features a garden and a sun terrace.",
+      "imageUrl": "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      "googleMapsUrl": "https://www.google.com/maps/@63.5307424,9.7737293,17z",
+      "rank": 4,
+      "price": "1200 NOK"
+    },
+    {
+      "id": 112,
+      "name": "Stein Rossvolstad",
+      "address": "Gnr 89 Bnr 10, 7257 Snillfjord",
+      "description": "Stein Rossvolstad is situated in Snillfjord. This villa provides air-conditioned accommodation with free WiFi. The villa is equipped with a flat-screen TV and 2 bedrooms",
+      "imageUrl": "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      "googleMapsUrl": "https://www.google.com/maps/@63.5281704,8.9265853,17z",
+      "rank": 4,
+      "price": "1200 NOK"
+    },
+    {
+      "id": 113,
+      "name": "Grønnbus Hytta Plaza",
+      "address": "Eldsfjellveien 140, 7250 Melandsjø",
+      "description": "Grønnbus Hytta Plaza is located 2 km from Melandsjø and offers ground-level accommodation in Melandsjø. Plaza features views to Nordic and the sea. Free WiFi is provided.",
+      "imageUrl": "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      "googleMapsUrl": "https://www.google.com/maps/@63.5287634,8.9302223,17z",
+      "rank": 4,
+      "price": "1200 NOK"
+    },
+    {
+      "id": 114,
+      "name": "Skalandslys Apartments",
+      "address": "Ervikveien 120, 5106 Øvre Ervik",
+      "description": "Offering free WiFi and garden views, Skalandslys Apartments is an accommodation located in Øvre Ervik, just 450 metres from closest town and 700 metres from Cornflakes Garden.",
+      "imageUrl": "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      "googleMapsUrl": "https://www.google.com/maps/@63.5309264,8.9303753,17z",
+      "rank": 4,
+      "price": "1200 NOK"
+    },
+    {
+      "id": 115,
+      "name": "Mjelde Studios",
+      "address": "Hellebakken 45, 5039 Bergen",
+      "description": "Featuring sea views, Mjelde Studios offers accommodation with barbecue facilities, around 1.7 km from Bergen downtown. This property offers access to a balcony, free private parking and free WiFi.",
+      "imageUrl": "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      "googleMapsUrl": "https://www.google.com/maps/@63.5349094,8.9258803,17z",
+      "rank": 4,
+      "price": "1200 NOK"
+    }
+  ],
+  "reservations": [
+    {
+      "id": 3000,
+      "from": "05/10/2020",
+      "to": "24/10/2020",
+      "cid": 100,
+      "uid": 204
+    }
+  ],
+  "users": [    
+    {
+      "id": 210,
+      "firstName": "Anette",
+      "lastName": "Normann",
+      "role": "admin"
+    },
+    {
+      "id": 211,
+      "firstName": "Ola",
+      "lastName": "Normann",
+      "role": "admin"
+    },
+    {
+      "id": 200,
+      "firstName": "Jonas",
+      "lastName": "Johannes",
+      "role": "user"
+    },
+    {
+      "id": 201,
+      "firstName": "Siri",
+      "lastName": "Stormberg",
+      "role": "user"
+    },
+    {
+      "id": 202,
+      "firstName": "Sandra",
+      "lastName": "McØdelleg",
+      "role": "user"
+    },
+    {
+      "id": 203,
+      "firstName": "Jens",
+      "lastName": "Løvik",
+      "role": "user"
+    },
+    {
+      "id": 204,
+      "firstName": "Karl",
+      "lastName": "Svensson",
+      "role": "user"
+    },
+    {
+      "id": 205,
+      "firstName": "Anna",
+      "lastName": "Lønning",
+      "role": "user"
+    },
+    {
+      "id": 206,
+      "firstName": "Hanne",
+      "lastName": "Kravitz",
+      "role": "user"
+    },
+    {
+      "id": 207,
+      "firstName": "Leo",
+      "lastName": "Hølland",
+      "role": "user"
+    }
+  ]
+}

@@ -8,7 +8,7 @@ import DataBox, {DataItem} from './common/DataBox';
 const Main: React.FC = () => {
   const { error, loading, results } = useGet({ apiUrl : endpoints.cabins }); 
   
-  const onBoxClickhandler = useCallback((id: number) => {
+  const onBookClickhandler = useCallback((id: number) => {
     const found = results.find((dataItem: DataItem) => dataItem.id === id);
     console.log('found ... ', found);
   }, [results]);
@@ -17,7 +17,7 @@ const Main: React.FC = () => {
     <Page loading={loading} error={error}>
       <BoxStack>
         {results?.map((dataItem: DataItem) => 
-          <DataBox key={dataItem.id} content={dataItem} onBoxClick={onBoxClickhandler} />
+          <DataBox key={dataItem.id} content={dataItem} onBookClick={onBookClickhandler} />
         )}
       </BoxStack>
     </Page>

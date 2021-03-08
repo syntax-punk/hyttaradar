@@ -13,12 +13,12 @@ export interface DataItem {
 
 interface DataBoxContent {
   content: DataItem;
-  onBoxClick: (id: number) => void;
+  onBookClick: (id: number) => void;
 }
 
-const DataBox: React.FC<DataBoxContent> = ({ content, onBoxClick }) => {
+const DataBox: React.FC<DataBoxContent> = ({ content, onBookClick }) => {
   return (
-    <article className="data-box" onClick={(e) => { onBoxClick(content.id) }}>
+    <article className="data-box" tabIndex={0}>
       <div className="db-banner" style={{
           backgroundImage: `url(${content.imageUrl})`
         }}>
@@ -26,10 +26,10 @@ const DataBox: React.FC<DataBoxContent> = ({ content, onBoxClick }) => {
       </div>
       <div className="db-title">
         <div className="db-header">{content.name}</div>
-        <div className="db-rank">{content.rank}</div>
+        <div className="db-rank">{"⭐️".repeat(content.rank)}</div>
         <div className="db-address">{content.address}</div>
       </div>
-      <div className="db-book">Book Me</div>
+      <div className="db-book" tabIndex={0} onClick={(e) => { onBookClick(content.id) }}>Book</div>
       <div className="db-description">{content.description}</div>
     </article>
   )

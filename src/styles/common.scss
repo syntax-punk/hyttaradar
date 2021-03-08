@@ -23,7 +23,7 @@ main {
   width: 100%;
   height: 100%;
   padding: 4rem 3rem;
-  grid-template-columns: repeat(3, 30rem);
+  grid-template-columns: repeat(3, 44rem);
   grid-template-rows: auto;
   grid-gap: 4rem 6rem;
   justify-content: center;
@@ -32,19 +32,25 @@ main {
 }
 
 .data-box {
-  width: 32rem;
-  height: 48rem;
+  position: relative;
+  width: 44rem;
+  height: 60rem;
   border-radius: 1rem;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.29);
   background-color: #ffffff;
-
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  transition: box-shadow linear 250ms;
+  
     .db-banner {
       position: relative;
-      width: 32rem;
-      height: 22rem;
+      width: 44rem;
+      height: 26rem;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;  
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
 
       .db-price {
         position: absolute;
@@ -53,23 +59,76 @@ main {
         align-items: center;
         height: 4rem;
         width: 12rem;
-        bottom: 1rem;
+        top: 1.8rem;
         right: 2rem;
         border-radius: 4px;
-        background-color: rgba(128, 240, 193, 0.76);
+        color: rgb(51, 51, 51);
+        background-color: #d6d6d6de;
         text-align: center;
         line-height: 2rem;
-        color: rgb(0, 0, 68);
         font-size: 2rem;
-        font-weight: 600;
-        cursor: pointer;
+        font-weight: 500;
       }
-
-      .db-price:hover {
-        transform: scale(1.1);
-      }
-
     }
+
+    .db-title {
+      width: 100%;
+      height: 12rem;
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+      padding: 1rem;
+      border-bottom: 1px solid #dadada;
+
+      .db-header {
+        font-size: 2.4rem;
+        letter-spacing: 1.2px;
+        font-weight: 600;
+      }
+
+      .db-rank {
+        font-size: 3rem;
+        letter-spacing: 2px;
+      }
+
+      .db-address {
+        text-align: center;
+        font-style: italic;
+      }
+    }
+
+    .db-book {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 4rem;
+      width: 12rem;
+      border-radius: 4px;
+      color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(128, 180, 240, 0.6);
+      text-align: center;
+      line-height: 2.4rem;
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin: 2.4rem auto 1rem auto;
+      cursor: pointer;
+      transition: transform linear 250ms;
+    }
+
+    .db-book:hover {
+      transform: scale(1.1);
+    }
+
+    .db-description {
+      margin: 2.6rem;
+      text-align: justify;
+      font-size: 1.8rem;
+    }
+}
+
+.data-box:hover {
+  box-shadow: 0 4px 8px 0 rgba(6, 105, 197, 0.6);
 }
 
 /* width */

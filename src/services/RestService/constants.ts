@@ -4,7 +4,7 @@ interface APIInterface {
   reservations: string;
 }
 
-export const apiUrls: APIInterface = {
+export const endpoints: APIInterface = {
   cabins: '/cabins',
   users: '/users',
   reservations: '/reservations',

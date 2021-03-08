@@ -1,2 +1,2 @@
 export { default } from './RestService';
-export { apiUrls } from './constants';
+export { endpoints } from './constants';

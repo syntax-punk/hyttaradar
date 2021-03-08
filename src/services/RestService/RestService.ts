@@ -6,7 +6,6 @@ export interface RestApiServiceInterface {
   token: string;
   baseUrl: string;
   config: any;
-  subscriptionkey: string;
   get: (path: string, extras?: any) => AxiosPromise<any>;
   getAction: (path: string, callback: any, extras?: any) => Promise<any>;
   post: (path: string, data: any, extras?: any) => AxiosPromise<any>;
@@ -21,23 +20,17 @@ export interface RestApiServiceInterface {
 
 class RestService implements RestApiServiceInterface {
   baseUrl: string;
-
   token: string;
-
   config: any;
-
-  subscriptionkey: string;
 
   constructor(token = '') {
     this.token = token;
-    this.baseUrl = process.env.REACT_APP_API_URL as string;
-    this.subscriptionkey = process.env.REACT_APP_SUBSCRIPTIONKEY as string;
+    this.baseUrl = process.env.REACT_APP_API_ENDPOINT as string;
     this.config = {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Accept-Language': 'nb-NO',
-        'Ocp-Apim-Subscription-Key': this.subscriptionkey,
       },
     };
     if (this.token) this.config.headers.Authorization = `Bearer ${this.token}`;

@@ -19,8 +19,9 @@ interface DataBoxContent {
 const DataBox: React.FC<DataBoxContent> = ({ content, onBoxClick }) => {
   return (
     <article className="data-box" onClick={(e) => { onBoxClick(content.id) }}>
-      <div className="db-banner">
-        <span className="db-image">{content.imageUrl}</span>
+      <div className="db-banner" style={{
+          backgroundImage: `url(${content.imageUrl})`
+        }}>
         <span className="db-price">{content.price}</span>
       </div>
       <div className="db-title">

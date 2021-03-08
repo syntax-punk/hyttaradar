@@ -32,12 +32,44 @@ main {
 }
 
 .data-box {
-  width: 30rem;
-  height: 40rem;
+  width: 32rem;
+  height: 48rem;
   border-radius: 1rem;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.29);
   background-color: #ffffff;
-  
+
+    .db-banner {
+      position: relative;
+      width: 32rem;
+      height: 22rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;  
+
+      .db-price {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+        width: 12rem;
+        bottom: 1rem;
+        right: 2rem;
+        border-radius: 4px;
+        background-color: rgba(128, 240, 193, 0.76);
+        text-align: center;
+        line-height: 2rem;
+        color: rgb(0, 0, 68);
+        font-size: 2rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .db-price:hover {
+        transform: scale(1.1);
+      }
+
+    }
 }
 
 /* width */

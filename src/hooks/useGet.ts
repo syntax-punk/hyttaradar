@@ -1,5 +1,5 @@
 /* eslint-disable no-shadow */
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { AxiosResponse, AxiosError } from 'axios';
 import {useRestService} from '../contexts/RestServiceContext';
 

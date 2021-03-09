@@ -30,7 +30,7 @@ const DataBox: React.FC<DataBoxContent> = ({ content, onBookClick }) => {
         <div className="db-address">{content.address}</div>
       </div>
       <div className="db-book" tabIndex={0} onClick={(e) => { onBookClick(content.id) }}>Book</div>
-      <div className="db-description">{content.description}</div>
+      <div className="db-description ">{content.description}</div>
     </article>
   )
 }

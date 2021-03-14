@@ -3,10 +3,12 @@ import Page from '../hocs/Page'
 import { endpoints } from '../services/RestService'
 import useGet from '../hooks/useGet';
 import BoxStack from './common/BoxStack';
-import DataBox, {DataItem} from './common/DataBox';
+import DataBox, { DataItem } from './common/DataBox';
+import { useModal } from '../contexts/ModalContext';
 
 const Main: React.FC = () => {
   const tilesTrashold = 6;
+  const { isModalActive, toggleModal } = useModal();
   const [ tilesAmount, setTilesAmount ] = useState(tilesTrashold);
   const { error, loading, results } = useGet({ apiUrl : endpoints.cabins }); 
   
@@ -15,8 +17,8 @@ const Main: React.FC = () => {
   }, [tilesAmount, setTilesAmount, results])
 
   const addNewHytta = useCallback(() => {
-    console.log("adding new");
-  }, []);
+    (!isModalActive) && toggleModal();
+  }, [isModalActive, toggleModal]);
 
   const onBookClickhandler = useCallback((id: number) => {
     const found = results.find((dataItem: DataItem) => dataItem.id === id);

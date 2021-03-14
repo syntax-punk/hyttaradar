@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from '../../hocs/Modal'
+import { useModal } from '../../contexts/ModalContext';
 
 const ModalForm: React.FC = () => {
 
@@ -8,15 +9,42 @@ const ModalForm: React.FC = () => {
     address: "",
     price: 0,
     description: "",
-  })
+  });
+
+  const { isModalActive, toggleModal } = useModal();
 
   const onInputChange = (value: any, key: string) => {
-    
     setFormData(prev => ({ ...prev, [key]: value }));
   } 
 
   const onFormSubmit = (event: any) => {
     event.preventDefault();
+
+    const payload ={
+      ...formData,
+      imageUrl: "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
+      googleMapsUrl: "https://www.google.com/maps/@63.5349094,8.9258803,17z",
+      rank: 5,
+      price: `${formData.price} NOK`
+    }
+    debugger
+    fetch("http://localhost:9200/cabins", {
+      method: "POST",
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    })
+      .then((response) => {
+        debugger
+        console.log("I got this ... ", response);
+      })
+      .catch((error) => {
+        debugger
+        console.error("Error: ", error);
+      })
+      .finally(() => toggleModal())
   }
 
   return (

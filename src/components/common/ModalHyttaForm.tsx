@@ -1,22 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Modal from '../../hocs/Modal'
 import { useModal } from '../../contexts/ModalContext';
 import { DataItem } from './DataBox';
+import Toast from './Toast';
 
 const ModalForm: React.FC<{ onDataSaved: (dataItem: DataItem) => void }> = ({ onDataSaved }) => {
-
-  const [formData, setFormData] = useState({
+  const defaultState = useMemo( () => ({
     name: "",
     address: "",
     price: 0,
     description: "",
-  });
+  }), []);
 
+  const [formData, setFormData] = useState(defaultState);
   const { isModalActive, toggleModal } = useModal();
+  const [displayToast, setDisplayToast] = useState(false);
+
+  useEffect(() => {
+    if (!isModalActive) {
+      setFormData(defaultState);
+    }
+  }, [isModalActive, defaultState])
 
   const onInputChange = (value: any, key: string) => {
     setFormData(prev => ({ ...prev, [key]: value }));
-  } 
+  }
 
   const onFormSubmit = (event: any) => {
     event.preventDefault();
@@ -44,12 +52,16 @@ const ModalForm: React.FC<{ onDataSaved: (dataItem: DataItem) => void }> = ({ on
       .catch((error) => {
         console.error("Error: ", error);
       })
-      .finally(() => toggleModal())
+      .finally(() => {
+        setDisplayToast(true);
+        setTimeout(toggleModal, 2000);
+      })
   }
 
   return (
     <Modal>
       <section className="hytta-add-form">
+        <Toast message={"Success"} type="success" display={displayToast} switcher={setDisplayToast}/> 
         <form onSubmit={onFormSubmit}>
           <span className="image-drop"></span>
           <input 

@@ -25,7 +25,9 @@
     "eject": "react-scripts eject",
     "generate:data": "node scripts/dbGenerator.js",
     "db:server": "json-server --port=9200 --watch db.json",
-    "start:server": "npm run generate:data && npm run db:server"
+    "start:server": "npm run generate:data && npm run db:server",
+    "e2e:open": "npx cypress open",
+    "e2e:run": "npx cypress run"
   },
   "eslintConfig": {
     "extends": [

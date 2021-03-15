@@ -1,6 +1,5 @@
 import React from 'react';
 import {Header, Footer, Main} from './components';
-import ModalForm from './components/common/ModalHyttaForm';
 
 function App() {
 
@@ -9,7 +8,6 @@ function App() {
       <Header/>
       <Main />
       <Footer />
-      <ModalForm />
     </>
   );
 }

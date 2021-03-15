@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Modal from '../../hocs/Modal'
 import { useModal } from '../../contexts/ModalContext';
+import { DataItem } from './DataBox';
 
-const ModalForm: React.FC = () => {
+const ModalForm: React.FC<{ onDataSaved: (dataItem: DataItem) => void }> = ({ onDataSaved }) => {
 
   const [formData, setFormData] = useState({
     name: "",
@@ -27,7 +28,6 @@ const ModalForm: React.FC = () => {
       rank: 5,
       price: `${formData.price} NOK`
     }
-    debugger
     fetch("http://localhost:9200/cabins", {
       method: "POST",
       headers: {
@@ -36,12 +36,12 @@ const ModalForm: React.FC = () => {
       },
       body: JSON.stringify(payload)
     })
-      .then((response) => {
-        debugger
-        console.log("I got this ... ", response);
+      .then((response) => response.json())
+      .then((data: DataItem) => {
+        console.log("created > ", data);
+        onDataSaved(data)
       })
       .catch((error) => {
-        debugger
         console.error("Error: ", error);
       })
       .finally(() => toggleModal())

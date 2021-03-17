@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header:React.FC = () => {
-  return <header>welcome to HYTTARADAR</header> 
+  return <header>HYTTARADAR</header> 
 } 
 
 export default Header;

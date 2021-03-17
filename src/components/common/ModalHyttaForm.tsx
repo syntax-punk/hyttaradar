@@ -8,7 +8,7 @@ const ModalForm: React.FC<{ onDataSaved: (dataItem: DataItem) => void }> = ({ on
   const defaultState = useMemo( () => ({
     name: "",
     address: "",
-    price: 0,
+    price: "",
     description: "",
   }), []);
 
@@ -79,7 +79,7 @@ const ModalForm: React.FC<{ onDataSaved: (dataItem: DataItem) => void }> = ({ on
             placeholder="Enter address" 
             onChange={(e) => onInputChange(e.target.value, "address")} />
           <input 
-            type="number" 
+            type="text" 
             name="price" 
             id="price-input" 
             value={formData.price}

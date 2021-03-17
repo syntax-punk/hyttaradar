@@ -32,7 +32,7 @@ const Main: React.FC = () => {
   }, [dataList]);
 
   const updateDataList = (dataItem: DataItem) => {
-    setDataList([ ...dataList, dataItem ]);
+    setDataList([ dataItem, ...dataList ]);
   }
   
   return (
@@ -40,7 +40,8 @@ const Main: React.FC = () => {
       <Page loading={loading} error={error}>
         <BoxStack>
           <span 
-            className={"round-button add-new-button"} 
+            className={"round-button add-new-button"}
+            tabIndex={0}
             onClick={addNewHytta}>
               ➕
           </span>
@@ -48,7 +49,8 @@ const Main: React.FC = () => {
             <DataBox key={dataItem.id} content={dataItem} onBookClick={onBookClickhandler} />
           )}
           <span 
-            className={`round-button more-button ${(tilesAmount === dataList.length) ? "button-disabled" : ""}`} 
+            className={`round-button more-button ${(tilesAmount === dataList.length) ? "button-disabled" : ""}`}
+            tabIndex={0}
             onClick={onShowMore}>
               ⬇︎
           </span>

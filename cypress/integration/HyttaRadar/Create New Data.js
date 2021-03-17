@@ -2,25 +2,11 @@
 
 
 context('HyttaRadar', () => {
-  beforeEach(() => {
+  before(() => {
     cy.visit("http://localhost:3000");
   });
 
-  it("check the page is loaded successfully", () => {
-    cy.get(".more-button")
-      .click();
-    cy.get(".box-stack")
-      .scrollTo("bottom")
-  });
-
-  it("check the data is more than 1 element", () => {
-    cy.get(".box-stack")
-      .find(".data-box")
-      .its("length")
-      .should("be.gte", 1);
-  });
-
-  it("add new hytta to the list", () => {
+  it("Add new hytta to the list", () => {
     cy.get(".add-new-button")
       .click();
     cy.get(".modal-screen")
@@ -42,5 +28,21 @@ context('HyttaRadar', () => {
       .click();
 
     cy.get(".toast-message").should('be.visible');
+
+    cy.wait(1500);
+
+    cy.get(".toast-message").should('not.exist');
+
+    cy.get(".new-item")
+      .should('be.visible')
   });
+
+  it("Check that the new item was successfully added", () => {
+      cy.get(".new-item .db-header")
+      .contains('Hytta De Lux')
+      cy.get(".new-item .db-address")
+        .contains('The Answer street 42')
+      cy.get(".new-item .db-description")
+        .contains('This is a trully amazing place to spend the best days of your busy life ...')
+  })
 });

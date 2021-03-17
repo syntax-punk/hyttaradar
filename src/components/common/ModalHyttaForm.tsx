@@ -47,6 +47,7 @@ const ModalForm: React.FC<{ onDataSaved: (dataItem: DataItem) => void }> = ({ on
       .then((response) => response.json())
       .then((data: DataItem) => {
         console.log("created > ", data);
+        data.new = true;
         onDataSaved(data)
       })
       .catch((error) => {
@@ -54,7 +55,7 @@ const ModalForm: React.FC<{ onDataSaved: (dataItem: DataItem) => void }> = ({ on
       })
       .finally(() => {
         setDisplayToast(true);
-        setTimeout(toggleModal, 2000);
+        setTimeout(toggleModal, 1200);
       })
   }
 

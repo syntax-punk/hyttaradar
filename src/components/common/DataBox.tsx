@@ -9,6 +9,7 @@ export interface DataItem {
   googleMapsUrl: string;
   rank: number;
   price: string;
+  new?: boolean;
 }
 
 interface DataBoxContent {
@@ -18,7 +19,7 @@ interface DataBoxContent {
 
 const DataBox: React.FC<DataBoxContent> = ({ content, onBookClick }) => {
   return (
-    <article className="data-box" tabIndex={0}>
+    <article className={`data-box${content.new ? " new-item" : ""}`} tabIndex={0}>
       <div className="db-banner" style={{
           backgroundImage: `url(${content.imageUrl})`
         }}>
@@ -26,7 +27,7 @@ const DataBox: React.FC<DataBoxContent> = ({ content, onBookClick }) => {
       </div>
       <div className="db-title">
         <div className="db-header">{content.name}</div>
-        <div className="db-rank">{"⭐️".repeat(content.rank)}</div>
+        <div className="db-rank">{" ⭐️ ".repeat(content.rank)}</div>
         <div className="db-address">{content.address}</div>
       </div>
       <div className="db-book" tabIndex={0} onClick={(e) => { onBookClick(content.id) }}>Book</div>

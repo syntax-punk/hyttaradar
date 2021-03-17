@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 
-context('HyttaRadar', () => {
+context('HyttaRadar Page Usage Test', () => {
   before(() => {
     cy.visit("http://localhost:3000");
   });

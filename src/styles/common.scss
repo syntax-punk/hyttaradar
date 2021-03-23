@@ -1,22 +1,49 @@
 header, footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 6rem;
   font-family: Montserrat, sans-serif;
   z-index: 2;
   letter-spacing: 3px;
 }
 
 header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   border-bottom: #e9e9e9;
   font-size: 2.8rem;
+  height: 10rem;
+  
+  .hero-title {
+    padding: 0 8rem;
+  }
+
+  .hero-slugs {
+    margin-left: 4rem;
+    list-style-type: none;
+
+    a {
+      font-size: 2.6rem;
+      line-height: 2.6rem;
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 4rem;
+      color: #8690af;
+      cursor: pointer;
+
+      &.active-slug {
+        color: #0b163b;
+      }
+    }
+  }
 }
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.1);
   border-top: #e9e9e9;
+  height: 6rem;
 }
 
 .modal-screen {

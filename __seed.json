@@ -175,61 +175,91 @@
       "id": 210,
       "firstName": "Anette",
       "lastName": "Normann",
-      "role": "admin"
+      "role": "admin",
+      "image":"https://s3.amazonaws.com/uifaces/faces/twitter/itstotallyamy/128.jpg",
+      "phone":"1-741-871-2739",
+      "email":"Jadon_Stehr45@gmail.com"
     },
     {
       "id": 211,
-      "firstName": "Ola",
+      "firstName": "Ola J",
       "lastName": "Normann",
-      "role": "admin"
+      "role": "admin",
+      "image":"https://s3.amazonaws.com/uifaces/faces/twitter/andytlaw/128.jpg",
+      "phone":"705-961-2893",
+      "email":"Nikolas.Corkery25@hotmail.com"
     },
     {
       "id": 200,
       "firstName": "Jonas",
       "lastName": "Johannes",
-      "role": "user"
+      "role": "user",
+      "image":"https://s3.amazonaws.com/uifaces/faces/twitter/agromov/128.jpg",
+      "phone":"1-443-967-8963 x45831",
+      "email":"Gerald14@hotmail.com"
     },
     {
       "id": 201,
-      "firstName": "Siri",
+      "firstName": "Siri Lø",
       "lastName": "Stormberg",
-      "role": "user"
+      "role": "user",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/overcloacked/128.jpg",
+      "phone":"(329) 863-7802 x4645",
+      "email":"Ilene74@gmail.com"
     },
     {
       "id": 202,
       "firstName": "Sandra",
-      "lastName": "McØdelleg",
-      "role": "user"
+      "lastName": "McØdellegg",
+      "role": "user",
+      "image":"https://s3.amazonaws.com/uifaces/faces/twitter/sokaniwaal/128.jpg",
+      "phone":"1-237-917-0034 x05346",
+      "email":"Leland.Bartoletti@yahoo.com"
     },
     {
       "id": 203,
-      "firstName": "Jens",
+      "firstName": "Jenson Das",
       "lastName": "Løvik",
-      "role": "user"
+      "role": "user",
+      "image":"https://s3.amazonaws.com/uifaces/faces/twitter/derekcramer/128.jpg",
+      "phone":"1-342-411-4978 x304",
+      "email":"Fritz_Greenholt40@gmail.com"
     },
     {
       "id": 204,
-      "firstName": "Karl",
+      "firstName": "Karl Tgif",
       "lastName": "Svensson",
-      "role": "user"
+      "role": "user",
+      "image":"https://s3.amazonaws.com/uifaces/faces/twitter/brandonflatsoda/128.jpg",
+      "phone":"1-453-491-3714",
+      "email":"Geovanny.Schmeler38@yahoo.com"
     },
     {
       "id": 205,
       "firstName": "Anna",
       "lastName": "Lønning",
-      "role": "user"
+      "role": "user",
+      "image":"https://s3.amazonaws.com/uifaces/faces/twitter/namankreative/128.jpg",
+      "phone":"1-382-695-4125 x008",
+      "email":"Petra.Koelpin62@yahoo.com"
     },
     {
       "id": 206,
-      "firstName": "Hanne",
+      "firstName": "Hanne Lin",
       "lastName": "Kravitz",
-      "role": "user"
+      "role": "user",
+      "image":"https://s3.amazonaws.com/uifaces/faces/twitter/mattbilotti/128.jpg",
+      "phone":"763.800.8709",
+      "email":"Nikolas_Koelpin90@yahoo.com"
     },
     {
       "id": 207,
-      "firstName": "Leo",
-      "lastName": "Hølland",
-      "role": "user"
+      "firstName": "Leo Von",
+      "lastName": "Banjikabakovitz",
+      "role": "user",
+      "image":"https://s3.amazonaws.com/uifaces/faces/twitter/thaodang17/128.jpg",
+      "phone":"(474) 342-9096 x126",
+      "email":"Ayana.Anderson@gmail.com"
     }
   ]
 }

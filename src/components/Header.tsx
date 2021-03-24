@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Slug from './common/Slug';
 
 const Header:React.FC<{ slugs?: string[] }> = ({ slugs }) => {
 
@@ -8,7 +8,7 @@ const Header:React.FC<{ slugs?: string[] }> = ({ slugs }) => {
       <div className="hero-title">HYTTARADAR</div>
       {slugs && slugs.length > 0 && 
         <ul className="hero-slugs">
-          { slugs.map(slug => <Link to={slug} className="active-slug" key={slug}>{slug}</Link>) }
+          { slugs.map(slug => <Slug key={slug} title={slug} path={slug} />) }
         </ul>
       }
     </header>

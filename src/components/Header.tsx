@@ -1,16 +1,12 @@
 import React from 'react';
-import Slug from './common/Slug';
+import Toolbar from './common/Toolbar';
 
 const Header:React.FC<{ slugs?: string[] }> = ({ slugs }) => {
 
   return (
     <header>
       <div className="hero-title">HYTTARADAR</div>
-      {slugs && slugs.length > 0 && 
-        <ul className="hero-slugs">
-          { slugs.map(slug => <Slug key={slug} title={slug} path={slug} />) }
-        </ul>
-      }
+      <Toolbar />
     </header>
 )}; 
 

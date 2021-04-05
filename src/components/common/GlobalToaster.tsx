@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { useEventsManager } from '../../contexts/EventsManagerContext'
+import React, { useState, useCallback } from 'react';
+import { useEventSubscriber } from '../../contexts/EventsManagerContext'
 
 const eventKeys = [
   "warning",
@@ -15,7 +15,6 @@ const GlobalToaster: React.FC = () => {
     display: false,
     message: ""
   });
-  const { eventsManager } = useEventsManager();
   
   const handleEvent = useCallback((message: string) => {
     console.log("-----> ", message);
@@ -32,11 +31,8 @@ const GlobalToaster: React.FC = () => {
     }, 1000);
 
   }, [setToasterData])
-
-  useEffect(() => {
-    return eventsManager?.subscribe<string>(eventKeys, handleEvent) 
-  }, [eventsManager, handleEvent])
-
+  
+  useEventSubscriber<string>(eventKeys, handleEvent);
 
   return toaster.display ? <article className="global-toast">{ toaster.message }</article> : null;
 }

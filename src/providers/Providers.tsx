@@ -1,14 +1,17 @@
 import React from 'react';
 import RestServiceProvider from './RestServiceProvider';
 import ModalProvider from './ModalProvider';
+import EventsManagerProvider from './EventsManagerProvider';
 
 const Providers: React.FC = ({ children }) => {
   return (
-    <RestServiceProvider>
-      <ModalProvider>
-        {children}
-      </ModalProvider>
-    </RestServiceProvider>
+    <EventsManagerProvider>
+      <RestServiceProvider>
+        <ModalProvider>
+          {children}
+        </ModalProvider>
+      </RestServiceProvider>
+    </EventsManagerProvider>
   );
 };
 

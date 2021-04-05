@@ -10,7 +10,7 @@ const Toast: React.FC<{ message: string, type: string, display: boolean, switche
     if (display) {
       setTimeout(() => {
         switcher(false);
-      }, 1000)
+      }, 400)
     }
   }, [display, switcher])
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import {Header, Footer, CabinsContainer} from './components';
+import GlobalToaster from './components/common/GlobalToaster';
 
 function App() {
   
@@ -27,6 +28,7 @@ function App() {
             <Route path="/*" render={() => <Redirect to={slugs[0]} />} />
           </Switch>
         <Footer />
+        <GlobalToaster />
       </Router>
   );
 }

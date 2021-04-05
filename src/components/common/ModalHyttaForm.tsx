@@ -55,7 +55,7 @@ const ModalForm: React.FC<{ onDataSaved: (dataItem: DataItem) => void }> = ({ on
       })
       .finally(() => {
         setDisplayToast(true);
-        setTimeout(toggleModal, 1200);
+        setTimeout(toggleModal, 500);
       })
   }
 

@@ -1,4 +1,4 @@
-import eventsManager from '../tools/EventsManager'
+import eventsManager from '../services/EventsManager'
 import React, { useMemo } from 'react';
 import EventsManagerContext from '../contexts/EventsManagerContext';
 

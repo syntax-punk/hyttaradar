@@ -1,4 +1,4 @@
-import { CustomEventHub } from '../tools/EventsManager';
+import { CustomEventHub } from '../services/EventsManager';
 import { createContext, useContext } from 'react';
 
 export interface EventsManagerContextInterface {
@@ -9,7 +9,7 @@ const EventsManagerContext = createContext<EventsManagerContextInterface>({
     eventsManager: null
 });
 
-export const useEchoEventHub = () => {
+export const useEventsManager = () => {
     return useContext(EventsManagerContext);
 };
 

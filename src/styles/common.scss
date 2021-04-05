@@ -238,6 +238,24 @@ footer {
   border: 6px;
 }
 
+.global-toast {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  height: 6rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.9rem;
+  color: #000000;
+  background-color: rgb(253, 166, 166);
+  border: 6px;
+  z-index: 10;
+}
+
 .hytta-add-form {
   position: relative;
   width: 75rem;

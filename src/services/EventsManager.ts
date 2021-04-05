@@ -1,6 +1,6 @@
 export interface CustomEventHub {
     emit<T>(key: string, message: T): void;
-    subscribe<T>(key: string, handler: (message: T) => void): () => void;
+    subscribe<T>(keys: Array<string | CustomEvents>, handler: (message: T) => void): () => void;
 }
 
 export enum CustomEvents {
@@ -13,14 +13,20 @@ class EventsManager implements CustomEventHub {
         window.dispatchEvent(event);
     }
 
-    subscribe<T>(key: string | CustomEvents, handler: (message: T) => void): () => void {
+    subscribe<T>(keys: Array<string | CustomEvents>, handler: (message: T) => void): () => void {
         const eventHandler = (e: Event): void => {
             const customEvent = e as CustomEvent;
             const message = customEvent.detail as T;
             handler(message);
         };
-        window.addEventListener(key, eventHandler);
-        return () => window.removeEventListener(key, eventHandler, false);
+        for (const key of keys) {
+            window.addEventListener(key, eventHandler);
+        }
+        return () => {
+            for (const key of keys) {
+                window.removeEventListener(key, eventHandler, false)
+            }
+        };
     }
 }
 const eventsManager = new EventsManager();

@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+      # These are configs for Node app
+      # When Docker compose starts this config will automatically
+      # use the Dockerfile in the directory to configure it
+      app:
+          build: .
+          depends_on:
+            # Our server does not work without database
+            # so this ensures that our databse is loaded first
+            - postgres
+          ports:
+            - "7676:7676"
+          volumes:
+            # Map current directory '.'
+            # to working directory in the container
+            - ./:/usr/src/app
+          
+      # This is config to our Postgres db container
+      # name 'postgres' is important so that we can
+      # refer to it when we map it on the network address
+      postgres:
+          image: postgres:14.1-alpine
+          restart: always
+          environment:
+              # We can set value of the environment variables
+              # in our docker-compose file
+              # our Node server app will use these to connect to the db
+              - POSTGRES_USER=voogie
+              - POSTGRES_PASSWORD=Kd096229
+              - POSTGRES_DB=calendar
+          ports:
+            - "5432:5432"
+          volumes:
+              # When pg container is started it will run any scripts
+              # provided in the "docker-entrypoint-inidb-d directory", this connects
+              # our seed file to the directory so that it gets run
+              - ./database-seed.sql:/docker-entrypoint-initdb.d/database-seed.sql

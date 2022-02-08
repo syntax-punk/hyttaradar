@@ -36,20 +36,16 @@ const Page: React.FC<PageProps> = ({ error, loading, children }) => {
     <ErrorContext.Provider
       value={{
         error: pageError,
-        setErrorCallback,
+        setErrorCallback
       }}
     >
       <LoadingContext.Provider
         value={{
           loading: pageLoading,
-          setLoadingCallback,
+          setLoadingCallback
         }}
       >
-        {loading 
-          ? <LoadingPage /> 
-          : error 
-            ? <ErrorPage message={pageError} /> 
-            : children}
+        {loading ? <LoadingPage /> : error ? <ErrorPage message={pageError} /> : children}
       </LoadingContext.Provider>
     </ErrorContext.Provider>
   );

@@ -7,5 +7,5 @@ interface APIInterface {
 export const endpoints: APIInterface = {
   cabins: '/cabins',
   users: '/users',
-  reservations: '/reservations',
+  reservations: '/reservations'
 };

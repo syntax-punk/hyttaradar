@@ -29,9 +29,9 @@ class RestService implements RestApiServiceInterface {
     this.config = {
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Accept-Language': 'nb-NO',
-      },
+        Accept: 'application/json',
+        'Accept-Language': 'nb-NO'
+      }
     };
     if (this.token) this.config.headers.Authorization = `Bearer ${this.token}`;
   }
@@ -98,7 +98,7 @@ class RestService implements RestApiServiceInterface {
   };
 
   openFile = (path: string, filename: string, method = 'get') => {
-    if (window.navigator && window.navigator.hasOwnProperty("msSaveOrOpenBlob")) {
+    if (window.navigator && window.navigator.hasOwnProperty('msSaveOrOpenBlob')) {
       this.downloadFile(path, filename, method);
       return;
     }
@@ -149,8 +149,8 @@ class RestService implements RestApiServiceInterface {
       method: method as Method,
       responseType: 'blob',
       headers: {
-        Authorization: `Bearer ${this.token}`,
-      },
+        Authorization: `Bearer ${this.token}`
+      }
     } as AxiosRequestConfig;
     return axios(config).then((response) => {
       if (response.status >= 400 && response.status < 600) throw new Error(response.statusText);

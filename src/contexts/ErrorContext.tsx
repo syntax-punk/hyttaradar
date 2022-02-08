@@ -7,7 +7,7 @@ interface ErrorContextType {
 
 const ErrorContext = createContext({
   error: '',
-  setErrorCallback: () => undefined,
+  setErrorCallback: () => undefined
 } as ErrorContextType);
 
 export default ErrorContext;

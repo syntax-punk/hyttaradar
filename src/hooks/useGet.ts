@@ -1,7 +1,7 @@
 /* eslint-disable no-shadow */
 import { useState, useEffect } from 'react';
 import { AxiosResponse, AxiosError } from 'axios';
-import {useRestService} from '../contexts/RestServiceContext';
+import { useRestService } from '../contexts/RestServiceContext';
 
 type ErrorOverrideFunc = {
   (error: AxiosError): void;
@@ -32,7 +32,7 @@ const useGet: GetData = ({ apiUrl, successCallback, errorOverride, extraDependen
   const [loading, setLoading] = useState(true as boolean);
   const [results, setResults] = useState([] as any);
   const { restService } = useRestService();
-  
+
   useEffect(() => {
     restService
       .get(apiUrl)

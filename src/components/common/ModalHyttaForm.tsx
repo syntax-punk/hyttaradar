@@ -1,16 +1,19 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import Modal from '../../hocs/Modal'
+import Modal from '../../hocs/Modal';
 import { useModal } from '../../contexts/ModalContext';
 import { DataItem } from './DataBox';
 import Toast from './Toast';
 
 const ModalForm: React.FC<{ onDataSaved: (dataItem: DataItem) => void }> = ({ onDataSaved }) => {
-  const defaultState = useMemo( () => ({
-    name: "",
-    address: "",
-    price: "",
-    description: "",
-  }), []);
+  const defaultState = useMemo(
+    () => ({
+      name: '',
+      address: '',
+      price: '',
+      description: ''
+    }),
+    []
+  );
 
   const [formData, setFormData] = useState(defaultState);
   const { isModalActive, toggleModal } = useModal();
@@ -20,85 +23,96 @@ const ModalForm: React.FC<{ onDataSaved: (dataItem: DataItem) => void }> = ({ on
     if (!isModalActive) {
       setFormData(defaultState);
     }
-  }, [isModalActive, defaultState])
+  }, [isModalActive, defaultState]);
 
   const onInputChange = (value: any, key: string) => {
-    setFormData(prev => ({ ...prev, [key]: value }));
-  }
+    setFormData((prev) => ({ ...prev, [key]: value }));
+  };
 
   const onFormSubmit = (event: any) => {
     event.preventDefault();
 
-    const payload ={
+    const payload = {
       ...formData,
-      imageUrl: "https://source.unsplash.com/320x240/?villa,hotel,house,vacation",
-      googleMapsUrl: "https://www.google.com/maps/@63.5349094,8.9258803,17z",
+      imageUrl: 'https://source.unsplash.com/320x240/?villa,hotel,house,vacation',
+      googleMapsUrl: 'https://www.google.com/maps/@63.5349094,8.9258803,17z',
       rank: 5,
       price: `${formData.price} NOK`
-    }
-    fetch("http://localhost:9200/cabins", {
-      method: "POST",
+    };
+    fetch('http://localhost:9200/cabins', {
+      method: 'POST',
       headers: {
-        'Accept': 'application/json, text/plain, */*',
+        Accept: 'application/json, text/plain, */*',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(payload)
     })
       .then((response) => response.json())
       .then((data: DataItem) => {
-        console.log("created > ", data);
+        console.log('created > ', data);
         data.new = true;
-        onDataSaved(data)
+        onDataSaved(data);
       })
       .catch((error) => {
-        console.error("Error: ", error);
+        console.error('Error: ', error);
       })
       .finally(() => {
         setDisplayToast(true);
         setTimeout(toggleModal, 500);
-      })
-  }
+      });
+  };
 
   return (
     <Modal>
       <section className="hytta-add-form">
-        <Toast message={"Success"} type="success" display={displayToast} switcher={setDisplayToast}/> 
+        <Toast
+          message={'Success'}
+          type="success"
+          display={displayToast}
+          switcher={setDisplayToast}
+        />
         <form onSubmit={onFormSubmit}>
           <span className="image-drop"></span>
-          <input 
-            type="text" 
-            name="name" 
-            id="name-input" 
+          <input
+            type="text"
+            name="name"
+            id="name-input"
             value={formData.name}
-            placeholder="Enter name" 
-            onChange={(e) => onInputChange(e.target.value, "name")}/>
-          <input 
-            type="text" 
-            name="address" 
-            id="address-input" 
+            placeholder="Enter name"
+            onChange={(e) => onInputChange(e.target.value, 'name')}
+          />
+          <input
+            type="text"
+            name="address"
+            id="address-input"
             value={formData.address}
-            placeholder="Enter address" 
-            onChange={(e) => onInputChange(e.target.value, "address")} />
-          <input 
-            type="text" 
-            name="price" 
-            id="price-input" 
+            placeholder="Enter address"
+            onChange={(e) => onInputChange(e.target.value, 'address')}
+          />
+          <input
+            type="text"
+            name="price"
+            id="price-input"
             value={formData.price}
-            placeholder="Enter price" 
-            onChange={(e) => onInputChange(+e.target.value, "price")} />
-          <textarea 
-            rows={16} 
-            cols={16} 
-            name="description" 
-            id="description-input" 
-            placeholder="Enter description" 
+            placeholder="Enter price"
+            onChange={(e) => onInputChange(+e.target.value, 'price')}
+          />
+          <textarea
+            rows={16}
+            cols={16}
+            name="description"
+            id="description-input"
+            placeholder="Enter description"
             value={formData.description}
-            onChange={(e) => onInputChange(e.target.value, "description")} />
-          <button type='submit' className="round-button">Save</button>
+            onChange={(e) => onInputChange(e.target.value, 'description')}
+          />
+          <button type="submit" className="round-button">
+            Save
+          </button>
         </form>
       </section>
     </Modal>
-  )
-}
+  );
+};
 
 export default ModalForm;

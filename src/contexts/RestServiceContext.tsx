@@ -7,7 +7,7 @@ interface RestApiServiceContextInterface {
 }
 
 const RestServiceContext = createContext<RestApiServiceContextInterface>({
-  restService: new RestService(),
+  restService: new RestService()
 });
 
 export const useRestService = () => {

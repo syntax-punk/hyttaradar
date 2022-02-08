@@ -7,9 +7,7 @@ const Providers: React.FC = ({ children }) => {
   return (
     <EventsManagerProvider>
       <RestServiceProvider>
-        <ModalProvider>
-          {children}
-        </ModalProvider>
+        <ModalProvider>{children}</ModalProvider>
       </RestServiceProvider>
     </EventsManagerProvider>
   );

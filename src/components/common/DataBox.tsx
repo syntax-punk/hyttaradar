@@ -19,21 +19,32 @@ interface DataBoxContent {
 
 const DataBox: React.FC<DataBoxContent> = ({ content, onBookClick }) => {
   return (
-    <article className={`data-box${content.new ? " new-item" : ""}`} tabIndex={0}>
-      <div className="db-banner" style={{
+    <article className={`data-box${content.new ? ' new-item' : ''}`} tabIndex={0}>
+      <div
+        className="db-banner"
+        style={{
           backgroundImage: `url(${content.imageUrl})`
-        }}>
+        }}
+      >
         <span className="db-price">{content.price}</span>
       </div>
       <div className="db-title">
         <div className="db-header">{content.name}</div>
-        <div className="db-rank">{" ⭐️ ".repeat(content.rank)}</div>
+        <div className="db-rank">{' ⭐️ '.repeat(content.rank)}</div>
         <div className="db-address">{content.address}</div>
       </div>
-      <div className="db-book" tabIndex={0} onClick={(e) => { onBookClick(content.id) }}>Book</div>
+      <div
+        className="db-book"
+        tabIndex={0}
+        onClick={(e) => {
+          onBookClick(content.id);
+        }}
+      >
+        Book
+      </div>
       <div className="db-description ">{content.description}</div>
     </article>
-  )
-}
+  );
+};
 
 export default DataBox;

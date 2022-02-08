@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 7676
 
-CMD ["npm", "run", "server"]
+CMD ["npm", "run", "server2"]

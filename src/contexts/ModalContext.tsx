@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react"
+import { createContext, useContext } from 'react';
 
 interface ModalContextInterface {
   isModalActive: boolean;
@@ -7,12 +7,14 @@ interface ModalContextInterface {
 
 const ModalContext = createContext({
   isModalActive: false,
-  toggleModal: () => {}
+  toggleModal: () => {
+    console.log('Modal Uninitialized!');
+  }
 } as ModalContextInterface);
 
 export const useModal = () => {
   const modal = useContext(ModalContext);
-  return modal
-}
+  return modal;
+};
 
 export default ModalContext;

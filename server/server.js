@@ -1,4 +1,5 @@
-const {Client} = require('pg');
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { Client } = require('pg');
 const express = require('express');
 
 const app = express();
@@ -9,30 +10,27 @@ const client = new Client({
   password: 'Kd096229',
   host: 'postgres',
   database: 'calendar'
-})
+});
 
 app.get('/', (req, res) => {
-  res.send('Halooissss')
+  res.send('Heisann Verden!');
 });
 
 app.get('/users', async (req, res) => {
-  const result = await client.query('select * from calendarusers')
-  .then((payload) => {
-    return payload.rows;
-  })
-  .catch(err => {
-    throw new Error('-> Query failed: ', err);
-  })
+  const result = await client
+    .query('select * from calendarusers')
+    .then((payload) => payload.rows)
+    .catch((err) => {
+      throw new Error('-> Query failed: ', err);
+    });
 
-  res.json(result)
+  res.json(result);
 });
 
 (async () => {
   await client.connect();
 
   app.listen(port, () => {
-    console.log(`-> listening: ${port}`)
+    console.log(`-> listening: ${port}`);
   });
-})()
-
-
+})();

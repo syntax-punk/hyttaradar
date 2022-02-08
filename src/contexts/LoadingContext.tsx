@@ -7,7 +7,7 @@ interface LoadingContextType {
 
 const LoadingContext = createContext({
   loading: false,
-  setLoadingCallback: () => undefined,
+  setLoadingCallback: () => undefined
 } as LoadingContextType);
 
 export default LoadingContext;

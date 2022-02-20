@@ -15,6 +15,7 @@ const Main: React.FC = () => {
   const [dataList, setDataList] = useState([] as DataItem[]);
 
   useEffect(() => {
+    debugger;
     setDataList(results);
   }, [results]);
 

@@ -32,7 +32,7 @@
     "generate:data": "node scripts/dbGenerator.js",
     "server": "nodemon ./server/server.js",
     "server2": "nodemon ./server/server2.js",
-    "db:server": "json-server --port=9200 db.json",
+    "db:server": "json-server --port=7676 db.json",
     "start:db:server": "npm run generate:data && npm run db:server",
     "e2e:open": "npx cypress open",
     "e2e:run": "npx cypress run",
